@@ -1,0 +1,18 @@
+name: Banking on mobile
+tag: android-bom
+instance:
+  - image: registry.gitlab.com/haaukins/forensics/android-phishing-login-page:android
+    dns:
+      - name: fake-big-bank.com
+        type: A
+  - image: registry.gitlab.com/haaukins/forensics/android-phishing-login-page:website
+    dns:
+      - name: big-bank.com
+        type: A
+    flags:
+      - tag: android-bom-1
+        name: Banking on mobile
+        env: APP_FLAG
+        points: 37
+        category: Forensics
+        td: Try to access big-bank.com, in anbox? what happens? how would the android app finded on fake-big-bank.com change this outcome? What does this app actually do?
