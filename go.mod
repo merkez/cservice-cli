@@ -1,4 +1,4 @@
-module github.com/mrtrkmnhub/cservice-client
+module github.com/mrtrkmnhub/cservice-cli
 
 go 1.15
 
