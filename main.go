@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"time"
 
-	pb "github.com/mrtrkmnhub/cservice-client/proto"
+	pb "github.com/mrtrkmnhub/cservice-cli/proto"
 	"gopkg.in/yaml.v2"
 )
 

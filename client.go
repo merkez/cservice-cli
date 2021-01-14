@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/dgrijalva/jwt-go"
-	pb "github.com/mrtrkmnhub/cservice-client/proto"
+	pb "github.com/mrtrkmnhub/cservice-cli/proto"
 	"github.com/rs/zerolog/log"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"

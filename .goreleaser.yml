@@ -15,7 +15,7 @@ builds:
 archives:
   - # ID of this archive.
     # Defaults to `default`.
-    id: cservice-client
+    id: cservice-cli
 
     # Builds reference which build instances should be archived in this archive.
     builds:
