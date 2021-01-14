@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/mrtrkmnhub/cservice-cli/grpcconn"
 	pb "github.com/mrtrkmnhub/cservice-cli/proto"
 	"gopkg.in/yaml.v2"
 )
@@ -21,16 +22,16 @@ var (
 
 func main() {
 
-	port, _ := strconv.ParseUint(PORT, 0, 64)
+	port, _ := strconv.ParseUint(grpcconn.PORT, 0, 64)
 
-	conf := Config{
-		Endpoint: ENDPOINT,
+	conf := grpcconn.Config{
+		Endpoint: grpcconn.ENDPOINT,
 		Port:     port,
-		AuthKey:  AUTH_KEY,
-		SignKey:  SIGN_KEY,
+		AuthKey:  grpcconn.AUTH_KEY,
+		SignKey:  grpcconn.SIGN_KEY,
 	}
 
-	c, err := NewExServiceConn(conf)
+	c, err := grpcconn.NewExServiceConn(conf)
 	if err != nil {
 		fmt.Printf("[exercise-service]  unable to connect %v", err)
 		panic(err)
