@@ -30,3 +30,4 @@ jobs:
           ENDPOINT: ${{ secrets.ENDPOINT }}
           PORT: ${{ secrets.PORT }}
           CAT_TAG: ${{ secrets.CAT_TAG }}
+          CHALLENGE_TAG: ${{ secrets.CHALLENGE_TAG }} 
