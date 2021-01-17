@@ -15,4 +15,4 @@ instance:
         env: APP_FLAG
         points: 37
         category: Forensics
-        td: Try to access big-bank.com, in anbox? what happens? how would the android app finded on fake-big-bank.com change this outcome? What does this app actually do?
+        td: Try to access big-bank.com, in anbox? What happens ? How would the android app finded on fake-big-bank.com change this outcome? What does this app actually do?
