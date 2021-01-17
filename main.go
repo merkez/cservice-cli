@@ -6,18 +6,12 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"os"
 	"strconv"
 	"time"
 
 	"github.com/mrtrkmnhub/cservice-cli/grpcconn"
 	pb "github.com/mrtrkmnhub/cservice-cli/proto"
 	"gopkg.in/yaml.v2"
-)
-
-var (
-	CHALLENGE_TAG = os.Getenv("CHALLENGE_TAG")
-	CAT_TAG       = os.Getenv("CAT_TAG") // assuming that categories are already in db.
 )
 
 func main() {
@@ -56,9 +50,7 @@ func main() {
 	} else {
 		fmt.Printf("Output: %s\n", b)
 		_, err = c.AddExercise(ctx, &pb.AddExerciseRequest{
-			Tag:         CHALLENGE_TAG,
-			CategoryTag: CAT_TAG,
-			Content:     string(b),
+			Content: string(b),
 		})
 		if err != nil {
 			panic(err)

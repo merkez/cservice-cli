@@ -11,8 +11,7 @@ service ExerciseStore{
     //todo future implementation, those will be managed by the webclient
     rpc AddExercise(AddExerciseRequest) returns (ResponseStatus) {}
     rpc AddCategory(AddCategoryRequest) returns (ResponseStatus) {}
-    rpc UpdateExercise(UpdateExerciseRequest) returns (ResponseStatus) {}
-    rpc UpdateCategory(UpdateCategoryRequest) returns (ResponseStatus) {}
+
 }
 
 message Empty{}
@@ -94,6 +93,3 @@ message AddCategoryRequest{
 
 message ResponseStatus{}
 
-message UpdateExerciseRequest{}
-
-message UpdateCategoryRequest{}

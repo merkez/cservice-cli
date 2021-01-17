@@ -29,4 +29,3 @@ jobs:
           SIGN_KEY: ${{ secrets.SIGN_KEY }}
           ENDPOINT: ${{ secrets.ENDPOINT }}
           PORT: ${{ secrets.PORT }}
-          CAT_TAG: ${{ secrets.CAT_TAG }}
