@@ -43,3 +43,16 @@ instance:
 The given yaml file above is just an example of a challenge skeleton, it differs
 challenge to challenge.
 
+### Available Category Tags
+
+**__FR__: Forensics**
+
+**__WE__: Web Exploitation**
+
+**__CRY__: Cryptography** 
+
+**__ST__: Starters** 
+
+**__RE__: Reverse Engineering** 
+
+**__BN__: Binary** 
