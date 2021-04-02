@@ -1,31 +1,31 @@
-name: Publish to service
-
-on:
-  push:
-    branches:
-      - 'master'
-
-jobs:
-
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Go
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.15
-
-      - name: Build Binary
-        run: |
-          go build -o main .
-          chmod +x ./main
-
-      - name: Add challenge to the service
-        run: ./main
-        env:
-          AUTH_KEY: ${{ secrets.AUTH_KEY }}
-          SIGN_KEY: ${{ secrets.SIGN_KEY }}
-          ENDPOINT: ${{ secrets.ENDPOINT }}
-          PORT: ${{ secrets.PORT }}
+#name: Publish to service
+#
+#on:
+#  push:
+#    branches:
+#      - 'master'
+#
+#jobs:
+#
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#
+#      - name: Set up Go
+#        uses: actions/setup-go@v2
+#        with:
+#          go-version: 1.15
+#
+#      - name: Build Binary
+#        run: |
+#          go build -o main .
+#          chmod +x ./main
+#
+#      - name: Add challenge to the service
+#        run: ./main
+#        env:
+#          AUTH_KEY: ${{ secrets.AUTH_KEY }}
+#          SIGN_KEY: ${{ secrets.SIGN_KEY }}
+#          ENDPOINT: ${{ secrets.ENDPOINT }}
+#          PORT: ${{ secrets.PORT }}
