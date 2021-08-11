@@ -1,5 +1,7 @@
 name: Banking on mobile
 tag: fr_android-bom
+od: |
+  organization description
 instance:
   - image: registry.gitlab.com/haaukins/forensics/android-phishing-login-page:android
     dns:
