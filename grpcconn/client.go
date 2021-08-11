@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/dgrijalva/jwt-go"
+	"github.com/golang-jwt/jwt/v4"
 	pb "github.com/mrtrkmnhub/cservice-cli/proto"
 	"github.com/rs/zerolog/log"
 	"google.golang.org/grpc"
