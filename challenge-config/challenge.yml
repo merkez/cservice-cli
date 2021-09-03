@@ -1,20 +1,57 @@
-name: Banking on mobile
-tag: fr_android-bom
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+#                                                 #
+#    TEMPLATE, THIS FILE MIGHT CHANGE CHALLENGE   #
+#    TO CHALLENGE, SEE OTHER REPOS IF YOU WOULD   #
+#    LIKE TO GET MORE INSIGHT ABOUT IT            #
+#                                                 #
+#                                                 #
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+
+name: < Challenge Name >
+tag: < categorytag_challengetag > # tag MUST BE in given format, otherwise CI will fail
+static: false # needs to be true only if the challenge does not include either docker or vm
+secret: false  # needs to be true only if the challenge itself will be secret
 od: |
-  organization description
+  ### Privilege escalation using SUID binary
+
+  This challenge is just a simple challenge where the SUID bit has been set for the find command in linux.
+  From a non root user you will be able to escalate your privileges because the find command can execute shell commands itself.
+  The challenge uses port 22 to setup a SSH server which the exploiter will be able to join.
+
+  **Prerequisites**
+
+  * Basic linux terminal usage
+  * Knowledge of SUID binaries
+
+  **Outcome**
+
+  * Practical knowledge of what a priviledge escalation is
+  * Gain more knowledge about dangers of SUID
 instance:
-  - image: registry.gitlab.com/haaukins/forensics/android-phishing-login-page:android
+  - image: < link-to-docker-image >    # leave it empty if challenge is static which means does not include either vm or docker
     dns:
-      - name: fake-big-bank.com
-        type: A
-  - image: registry.gitlab.com/haaukins/forensics/android-phishing-login-page:website
+      - name: < dns-record-if-any >
+        type: < dns-record-type >
+  - image: < link-to-docker-image >
     dns:
-      - name: big-bank.com
-        type: A
+      - name: < dns-record-if-any >
+        type: < dns-record-type >
+    envs:
+      - env:  <name-of-env-variable>
+        value: <value-of-env-variable>
+      - env:  <name-of-env-variable>
+        value: <value-of-env-variable>
     flags:
-      - tag: android-bom-1
-        name: Banking on mobile
-        env: APP_FLAG
-        points: 37
-        category: Forensics
-        td: Try to access big-bank.com, in anbox? what happens? how would the android app finded on fake-big-bank.com change this outcome? What does this app actually do?
+      - tag: < subtag-of-the-challenge >
+        name: < name-of-child-challenge >
+        env: < env-variable-for-flag >
+        points: < challenge-points >
+        category: < challenge-category-full >
+        td: |
+          < challenge-description >
+        reqs: |
+          < prerequisites-if-any >
+        outcomes: |
+          <outcomes-from-the-challenge>
+status: 0 #  0 > will push the challenge to production, by default it is 1.
+
